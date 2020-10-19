@@ -18,7 +18,12 @@ interface Orphanage {
     name: string;
 }
 
+
+
 function OrphanagesMap() {
+
+    
+
     const [ orphanages, setOrphanages ] = useState<Orphanage[]>([]);
 
 
@@ -44,9 +49,10 @@ function OrphanagesMap() {
                 </footer>
             </aside>
             <Map
-                center={[-27.4943457,-48.510643]}
-                zoom={12}
+                center={[-27.5255026,-48.5013035]}
+                zoom={10}
                 style={{ width: '100%', height: '100%' }}
+                
             >
                {/*  <TileLayer url="https://a.tile.openstreetmap.org/{z}/{x}/{y}.png" />  */}
                <TileLayer url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`}  />
